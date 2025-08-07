@@ -6,7 +6,7 @@ from warnings import filterwarnings
 filterwarnings("ignore", category=SoundcardRuntimeWarning)
 
 def to_db(x):
-    return 20 * log10(max(x, 1e-10))
+    return 20 * log10(max(float(x), 1e-10))
 
 def init(bands_count, min=50, max=16000):
     """Init lib (calc bands)"""
